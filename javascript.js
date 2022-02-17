@@ -12,35 +12,35 @@ function playRound(playerChoice, computerChoice) {
     computerChoice = computerPlay()
 
     if (playerChoice == 'rock' && computerChoice == 'scissors') {
-        playerScore = playerScore + 1
-        return alert(`Congrats, rock beats scissors, you win! \n Score:${playerScore}:${computerScore}`)
+        playerScore++
+        return alert(`Congrats! Rock beats scissors, you win! \n\nThe score is ${playerScore}-${computerScore}`)
     } else if (computerChoice == 'paper') {
-        computerScore = computerScore + 1
-        return alert(`Sorry, paper beats rock, you lose! \n Score:${playerScore}:${computerScore}`)
+        computerScore++
+        return alert(`Sorry! Paper beats rock, you lose! \n\nThe score is ${playerScore}-${computerScore}`)
     } else if (computerChoice == 'rock') {
-        return alert(`It\'s a tie! \n Score:${playerScore}:${computerScore}`)
+        return alert(`It\'s a tie! \n\nThe score is ${playerScore}-${computerScore}`)
     }
 
     if (playerChoice == 'paper' && computerChoice == 'rock') {
-        playerScore = playerScore + 1
-        return alert(`Congrats, paper beats rock, you win! \n Score:${playerScore}:${computerScore}`) 
+        playerScore++
+        return alert(`Congrats! Paper beats rock, you win! \n\nThe score is ${playerScore}-${computerScore}`) 
     } else if (computerChoice == 'scissors') {
-        computerScore = computerScore + 1
-        return alert(`Sorry, scissors beats paper, you lose! \n Score:${playerScore}:${computerScore}`)
+        computerScore++
+        return alert(`Sorry! Scissors beats paper, you lose! \n\nThe score is ${playerScore}-${computerScore}`)
     } else if (computerChoice == 'paper') {
-        return alert(`It\'s a tie! \n Score:${playerScore}:${computerScore}`)
+        return alert(`It\'s a tie! \n\nThe score is ${playerScore}-${computerScore}`)
     }
 
     if (playerChoice == 'scissors' && computerChoice == 'paper') {
-        playerScore = playerScore + 1
-        return alert(`Congrats, scissors beats paper, you win! \n Score:${playerScore}:${computerScore}`)
+        playerScore++
+        return alert(`Congrats! Scissors beats paper, you win! \n\nThe score is ${playerScore}-${computerScore}`)
     } else if (computerChoice == 'rock') {
-        computerScore = computerScore + 1
-        return alert(`Sorry, rock beats scissors, you lose! \n Score:${playerScore}:${computerScore}`)
+        computerScore++
+        return alert(`Sorry! Rock beats scissors, you lose! \n\nThe score is ${playerScore}-${computerScore}`)
     } else if (computerChoice == 'scissors') {
-        return alert(`It\'s a tie! \n Score:${playerScore}:${computerScore}`)
+        return alert(`It\'s a tie! \n\nThe score is ${playerScore}-${computerScore}`)
     }
-    
+
 }
 
 function game() {
@@ -49,9 +49,11 @@ function game() {
     }
 
     if (playerScore > computerScore) {
-        alert(`you are a winner! \n Score:${playerScore}:${computerScore}`)
+        alert(`You are a winner! \n\nThe final score was  ${playerScore}-${computerScore}`)
+    } else if (playerScore < computerScore) {
+        alert(`You are a loser! \n\nThe final score was ${playerScore}-${computerScore}`)
     } else {
-        alert(`You are a loser! \n Score:${playerScore}:${computerScore}`)
+        alert(`It\s a tie! \n\nThe final score was ${playerScore}-${computerScore}`)
     }
 
     playerScore = 0
